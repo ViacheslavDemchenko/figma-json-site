@@ -1,0 +1,506 @@
+/* 
+  Базовая заготовка проекта.
+  Следующий этап: довести размеры, отступы, цвета и изображения до Pixel Perfect по figma-file.json.
+*/
+
+:root {
+  --color-dark: #1f2125;
+  --color-muted: #62686c;
+  --color-accent: #08a653;
+  --color-white: #ffffff;
+  --color-light: #f5f5f5;
+  --color-border: #e5e5e5;
+
+  /* SF Pro Display и SeoulNamsan могут быть недоступны на Windows. */
+  --font-main: "SF Pro Display", Arial, sans-serif;
+  --font-accent: "Inter", Arial, sans-serif;
+
+  --container: 1170px;
+  --section-space: 100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  background: var(--color-white);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 51px;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 5px;
+  color: var(--color-white);
+  background: rgba(8, 166, 82, 0.85);
+  font-family: var(--font-accent);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.placeholder-image {
+  background:
+    linear-gradient(135deg, rgba(8, 166, 82, 0.12), rgba(31, 33, 37, 0.12)),
+    #d9d9d9;
+}
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  background: var(--color-white);
+}
+
+.site-header__inner {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo__mark {
+  width: 72px;
+  height: 73px;
+  display: block;
+  background: var(--color-light);
+}
+
+.logo__text {
+  display: grid;
+  gap: 2px;
+}
+
+.logo__text strong {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.logo__text small {
+  font-size: 14px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  margin: 6px 0;
+  background: var(--color-dark);
+}
+
+.hero {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__inner {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__panel {
+  width: min(100%, 670px);
+  padding: 56px 0;
+}
+
+.hero__panel h1 {
+  max-width: 622px;
+  margin: 0 0 55px;
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.request {
+  padding: 70px 0;
+  background: var(--color-white);
+}
+
+.request h2,
+.about h2,
+.products h2,
+.custom h2,
+.advantages h2,
+.faq h2,
+.contacts h2 {
+  margin: 0 0 36px;
+  font-size: 36px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.request-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: end;
+}
+
+.request-form label {
+  display: grid;
+  gap: 10px;
+  color: var(--color-muted);
+}
+
+.request-form input {
+  width: 100%;
+  min-height: 51px;
+  border: 1px solid var(--color-border);
+  padding: 0 16px;
+}
+
+.about {
+  padding: var(--section-space) 0;
+  background: var(--color-light);
+}
+
+.about__grid,
+.contacts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.section-label {
+  margin: 0 0 20px;
+  color: var(--color-accent);
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}
+
+.about__content p {
+  font-size: 18px;
+  line-height: 1.47;
+}
+
+.about__image {
+  min-height: 420px;
+}
+
+.products {
+  padding: var(--section-space) 0;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+}
+
+.product-card__image {
+  aspect-ratio: 1 / 1;
+}
+
+.product-card h3 {
+  margin: 0;
+  padding: 22px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.products__button {
+  margin-top: 40px;
+}
+
+.custom {
+  position: relative;
+  min-height: 746px;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.custom__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.custom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.04));
+}
+
+.custom__inner {
+  position: relative;
+  z-index: 1;
+  min-height: 746px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.custom h2 {
+  max-width: 670px;
+}
+
+.custom p {
+  max-width: 570px;
+  margin: 0 0 45px;
+  font-size: 18px;
+  line-height: 1.47;
+}
+
+.advantages {
+  padding: var(--section-space) 0;
+  background: var(--color-white);
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.advantages article {
+  padding: 36px;
+  border: 1px solid var(--color-border);
+}
+
+.advantages span {
+  color: var(--color-accent);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.advantages h3 {
+  font-size: 24px;
+}
+
+.advantages p {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.faq {
+  padding: var(--section-space) 0;
+  background: var(--color-light);
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq details {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.faq p {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.contacts {
+  padding: var(--section-space) 0;
+}
+
+.contacts p {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.contacts__map {
+  min-height: 430px;
+}
+
+.site-footer {
+  padding: 70px 0 24px;
+  background: var(--color-light);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+.site-footer h3 {
+  margin: 0 0 24px;
+}
+
+.site-footer a,
+.site-footer p {
+  display: block;
+  margin: 0 0 14px;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.site-footer__bottom {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-space: 60px;
+  }
+
+  .container {
+    width: min(100% - 30px, var(--container));
+  }
+
+  .site-header__inner {
+    min-height: 76px;
+  }
+
+  .logo__mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo__text strong {
+    font-size: 22px;
+  }
+
+  .logo__text small {
+    font-size: 12px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: 76px 0 auto 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 15px;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border);
+  }
+
+  body.menu-open .site-nav {
+    display: flex;
+  }
+
+  .hero,
+  .hero__inner {
+    min-height: 520px;
+  }
+
+  .hero__panel {
+    padding: 40px 0;
+  }
+
+  .hero__panel h1,
+  .request h2,
+  .about h2,
+  .products h2,
+  .custom h2,
+  .advantages h2,
+  .faq h2,
+  .contacts h2 {
+    font-size: 28px;
+  }
+
+  .request-form,
+  .about__grid,
+  .products__grid,
+  .advantages__grid,
+  .contacts__grid,
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .custom,
+  .custom__inner {
+    min-height: 560px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+  }
+}

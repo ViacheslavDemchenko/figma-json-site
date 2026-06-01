@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ю-Упак | Картонная упаковка</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <strong>Ю-Упак</strong>
+          <small>Картонная упаковка</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Главное меню">
+        <a href="#about">О Компании</a>
+        <a href="#products">Продукция</a>
+        <a href="#custom">Коробки на заказ</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__bg placeholder-image">
+        <!-- TODO: заменить placeholder на фоновое изображение из Figma imageRef -->
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__panel">
+          <h1>Ю-Упак - это полный цикл производства упаковки из всех видов картона</h1>
+          <a class="button" href="#request">Подобрать упаковку</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="request" id="request">
+      <div class="container">
+        <h2>Поможем подобрать индивидуальный вариант упаковки для вас</h2>
+
+        <form class="request-form">
+          <label>
+            <span>Имя*</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span>Номер телефона*</span>
+            <input type="tel" name="phone" required />
+          </label>
+
+          <label>
+            <span>E-mail</span>
+            <input type="email" name="email" />
+          </label>
+
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about__grid">
+        <div class="about__content">
+          <p class="section-label">О НАС</p>
+          <h2>Наша компания</h2>
+          <p>
+            ООО “ЮНА” производит картонную упаковку и помогает подобрать индивидуальное решение под задачу клиента.
+          </p>
+          <a class="button" href="#request">Заказать упаковку</a>
+        </div>
+
+        <div class="about__image placeholder-image">
+          <!-- TODO: заменить placeholder на изображение из Figma imageRef -->
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <h2>Сделаем коробки которые вам нужны</h2>
+
+        <div class="products__grid">
+          <article class="product-card">
+            <div class="product-card__image placeholder-image"></div>
+            <h3>Гофрокороба</h3>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image placeholder-image"></div>
+            <h3>Коробки по применению</h3>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image placeholder-image"></div>
+            <h3>Коробки с печатью</h3>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image placeholder-image"></div>
+            <h3>Изделия из переплетного картона</h3>
+          </article>
+        </div>
+
+        <a class="button products__button" href="#">Перейти в каталог</a>
+      </div>
+    </section>
+
+    <section class="custom" id="custom">
+      <div class="custom__bg placeholder-image">
+        <!-- TODO: заменить placeholder на фоновое изображение из Figma imageRef -->
+      </div>
+
+      <div class="container custom__inner">
+        <h2>Нужна уникальная упаковка? Разработаем её для вас!</h2>
+        <p>Воплощение любых конструкторских идей от простых до самых сложных упаковочных решений</p>
+        <a class="button" href="#request">Подобрать упаковку</a>
+      </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <h2>Почему именно мы?</h2>
+
+        <div class="advantages__grid">
+          <article>
+            <span>01</span>
+            <h3>Поддержка</h3>
+            <p>Помогаем подобрать подходящий вариант упаковки.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Опыт</h3>
+            <p>Работаем с разными видами картонной упаковки.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Сервис</h3>
+            <p>Сопровождаем заказ от идеи до готового изделия.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2>Ответим на ваши вопросы</h2>
+
+        <div class="faq-list">
+          <details open>
+            <summary>Как расчитывается стоимость заказа?</summary>
+            <p>Стоимость зависит от размеров, тиража, материала, печати и сложности конструкции.</p>
+          </details>
+
+          <details>
+            <summary>Как быстро выполнят мой заказ?</summary>
+            <p>Срок зависит от объема и сложности заказа.</p>
+          </details>
+
+          <details>
+            <summary>Сколько стоит доставка моего заказа?</summary>
+            <p>Стоимость доставки рассчитывается индивидуально.</p>
+          </details>
+
+          <details>
+            <summary>Подходит ли ваша продукция для хранения продуктов питания?</summary>
+            <p>Это зависит от выбранного материала и требований к упаковке.</p>
+          </details>
+
+          <details>
+            <summary>Какие документы вам нужно предоставить?</summary>
+            <p>Для расчета обычно нужны размеры, тираж и требования к упаковке.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <div class="container contacts__grid">
+        <div>
+          <h2>Местоположение и контакты</h2>
+          <p>143442, Московская обл. г. Красногорск, Аристово, ул. Светлая, 19, пом. 2339</p>
+          <p>
+            <a href="mailto:korobka@gmail.com">korobka@gmail.com</a><br />
+            <a href="mailto:korobka@help.ru">korobka@help.ru</a>
+          </p>
+          <p><a href="tel:+79834565665">+7 (983) 456-56-65</a></p>
+        </div>
+
+        <div class="contacts__map placeholder-image">
+          <!-- TODO: заменить placeholder на карту -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <h3>Каталог</h3>
+        <a href="#">Гофрокороба</a>
+        <a href="#">Коробки по применению</a>
+        <a href="#">Коробки с печатью</a>
+      </div>
+
+      <div>
+        <h3>Информация</h3>
+        <a href="#about">О нас</a>
+        <a href="#">Команда</a>
+        <a href="#">Доставка</a>
+        <a href="#">Наш сервис</a>
+      </div>
+
+      <div>
+        <h3>Адрес и контакты</h3>
+        <p>143442, Московская обл. г. Красногорск, Аристово, ул. Светлая, 19, пом. 2339</p>
+        <a href="tel:+79834565665">+7 (983) 456-56-65</a>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <span>Все права защищены</span>
+      <a href="#">Условия и положения</a>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
