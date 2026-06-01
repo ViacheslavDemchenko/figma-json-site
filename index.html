@@ -217,19 +217,36 @@
     </section>
 
     <section class="contacts" id="contacts">
-      <div class="container contacts__grid">
-        <div>
-          <h2>Местоположение и контакты</h2>
-          <p>143442, Московская обл. г. Красногорск, Аристово, ул. Светлая, 19, пом. 2339</p>
-          <p>
-            <a href="mailto:korobka@gmail.com">korobka@gmail.com</a><br />
-            <a href="mailto:korobka@help.ru">korobka@help.ru</a>
-          </p>
-          <p><a href="tel:+79834565665">+7 (983) 456-56-65</a></p>
-        </div>
+      <div class="container contacts__inner">
+        <h2>Местоположение и контакты</h2>
 
-        <div class="contacts__map placeholder-image">
-          <!-- TODO: заменить placeholder на карту -->
+        <div class="contacts__grid">
+          <div class="contacts__map placeholder-image">
+            <!-- TODO: заменить placeholder на карту из Figma imageRef 803a4e12e3e7aee8dd8f873a1ef1036bcad5c168 -->
+          </div>
+
+          <address class="contacts__details">
+            <div class="contacts__group">
+              <strong>Адрес:</strong>
+              <p>Адрес: 143442, Московская обл. г. Красногорск, Аристово, ул. Светлая, 19, пом. 2339</p>
+            </div>
+
+            <div class="contacts__group">
+              <strong>Email:</strong>
+              <p>
+                <a href="mailto:korobka@gmail.com">korobka@gmail.com</a>
+                <a href="mailto:korobka@help.ru">korobka@help.ru</a>
+              </p>
+            </div>
+
+            <div class="contacts__group">
+              <strong>Номер:</strong>
+              <p>
+                <a href="tel:+79834565665">+7 (983) 456-56-65</a>
+                <a href="tel:+79834565665">+7 (983) 456-56-65</a>
+              </p>
+            </div>
+          </address>
         </div>
       </div>
     </section>
@@ -237,14 +254,15 @@
 
   <footer class="site-footer">
     <div class="container site-footer__grid">
-      <div>
+      <div class="site-footer__column">
         <h3>Каталог</h3>
-        <a href="#">Гофрокороба</a>
-        <a href="#">Коробки по применению</a>
-        <a href="#">Коробки с печатью</a>
+        <a href="#products">Гофрокороба</a>
+        <a href="#products">Коробки по применению</a>
+        <a href="#products">Коробки с печатью</a>
+        <a href="#products">Коробки для подарков</a>
       </div>
 
-      <div>
+      <div class="site-footer__column">
         <h3>Информация</h3>
         <a href="#about">О нас</a>
         <a href="#">Команда</a>
@@ -252,17 +270,29 @@
         <a href="#">Наш сервис</a>
       </div>
 
-      <div>
+      <div class="site-footer__column site-footer__contacts">
         <h3>Адрес и контакты</h3>
-        <p>143442, Московская обл. г. Красногорск, Аристово, ул. Светлая, 19, пом. 2339</p>
         <a href="tel:+79834565665">+7 (983) 456-56-65</a>
+        <a href="tel:+79834565665">+7 (983) 456-56-65</a>
+        <a href="mailto:korobka@gmail.com">korobka@gmail.com</a>
+        <a href="mailto:korobka@help.ru">korobka@help.ru</a>
       </div>
+
+      <a class="logo site-footer__logo" href="#">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <strong>Ю-Упак</strong>
+          <small>Картонная упаковка</small>
+        </span>
+      </a>
     </div>
 
-    <div class="container site-footer__bottom">
-      <span>Все права защищены</span>
-      <a href="#">Условия и положения</a>
-      <a href="#">Политика конфиденциальности</a>
+    <div class="site-footer__bottom-wrap">
+      <div class="container site-footer__bottom">
+        <span>Все права защищены</span>
+        <a href="#">Условия и положения</a>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
 
