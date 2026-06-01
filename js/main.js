@@ -2,13 +2,17 @@ const burger = document.querySelector('.burger');
 
 if (burger) {
   burger.addEventListener('click', () => {
-    document.body.classList.toggle('menu-open');
+    const isOpen = document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', String(isOpen));
   });
 }
 
 document.querySelectorAll('.site-nav a').forEach((link) => {
   link.addEventListener('click', () => {
     document.body.classList.remove('menu-open');
+    if (burger) {
+      burger.setAttribute('aria-expanded', 'false');
+    }
   });
 });
 

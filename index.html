@@ -24,11 +24,13 @@
         <a href="#contacts">Контакты</a>
       </nav>
 
-      <button class="burger" type="button" aria-label="Открыть меню">
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
+
+      <button class="header-search" type="button" aria-label="Поиск"></button>
     </div>
   </header>
 
@@ -41,7 +43,7 @@
       <div class="container hero__inner">
         <div class="hero__panel">
           <h1>Ю-Упак - это полный цикл производства упаковки из всех видов картона</h1>
-          <a class="button" href="#request">Подобрать упаковку</a>
+          <a class="button button--hero" href="#request">Подобрать упаковку</a>
         </div>
       </div>
     </section>
@@ -66,55 +68,66 @@
             <input type="email" name="email" />
           </label>
 
-          <button class="button" type="submit">Отправить</button>
+          <button class="button button--submit" type="submit">Отправить</button>
         </form>
       </div>
     </section>
 
     <section class="about" id="about">
-      <div class="container about__grid">
+      <div class="about__bg placeholder-image">
+        <!-- TODO: заменить placeholder на изображение из Figma imageRef a428c2523f767d8cce18d5882a47ce3ff74ee2f7 -->
+      </div>
+
+      <div class="container about__inner">
         <div class="about__content">
-          <p class="section-label">О НАС</p>
           <h2>Наша компания</h2>
           <p>
-            ООО “ЮНА” производит картонную упаковку и помогает подобрать индивидуальное решение под задачу клиента.
+            ООО “ЮНА” - это полный цикл производства упаковки из всех видов картона. Основная цель компании - учитывая интересы наших клиентов, обеспечить отличный сервис и качество производимой продукции. Быстрые сроки изготовления, качество продукции, удобный сервис, обеспечивают нам большое количество заказов и довольных клиентов.
           </p>
-          <a class="button" href="#request">Заказать упаковку</a>
+          <a class="button button--about" href="#request">Заказать упаковку</a>
         </div>
 
-        <div class="about__image placeholder-image">
-          <!-- TODO: заменить placeholder на изображение из Figma imageRef -->
-        </div>
+        <p class="about__decor" aria-hidden="true"><span>О</span><span>Н</span><span>А</span><span>С</span></p>
       </div>
     </section>
 
     <section class="products" id="products">
-      <div class="container">
+      <div class="container products__inner">
         <h2>Сделаем коробки которые вам нужны</h2>
 
         <div class="products__grid">
           <article class="product-card">
-            <div class="product-card__image placeholder-image"></div>
+            <div class="product-card__image placeholder-image">
+              <!-- TODO: заменить placeholder на изображение из Figma imageRef ba3f598cdac2424c9d59dcbb9f82d9a2e117db00 -->
+            </div>
             <h3>Гофрокороба</h3>
           </article>
 
           <article class="product-card">
-            <div class="product-card__image placeholder-image"></div>
+            <div class="product-card__image placeholder-image">
+              <!-- TODO: заменить placeholder на изображение из Figma imageRef 226290ded1c1422b3a1f687b129ce94507c64f9a -->
+            </div>
             <h3>Коробки по применению</h3>
           </article>
 
           <article class="product-card">
-            <div class="product-card__image placeholder-image"></div>
+            <div class="product-card__image placeholder-image">
+              <!-- TODO: заменить placeholder на изображение из Figma imageRef aeb066ed731c7e584591569ffba06abb10abaa6d -->
+            </div>
             <h3>Коробки с печатью</h3>
           </article>
 
           <article class="product-card">
-            <div class="product-card__image placeholder-image"></div>
+            <div class="product-card__image placeholder-image">
+              <!-- TODO: заменить placeholder на изображение из Figma imageRef a50c08a25d00f73a73ce677076f1bae5d457f2d0 -->
+            </div>
             <h3>Изделия из переплетного картона</h3>
           </article>
         </div>
 
-        <a class="button products__button" href="#">Перейти в каталог</a>
+        <a class="catalog-link products__button" href="#">
+          <span>Перейти в каталог</span>
+        </a>
       </div>
     </section>
 
