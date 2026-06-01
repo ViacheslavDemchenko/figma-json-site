@@ -133,48 +133,62 @@
 
     <section class="custom" id="custom">
       <div class="custom__bg placeholder-image">
-        <!-- TODO: заменить placeholder на фоновое изображение из Figma imageRef -->
+        <!-- TODO: заменить placeholder на фоновое изображение из Figma imageRef 8d4904a565f61faf4b7cf2778b9ae10436790d05 / mobile 36e4e3ea779c97cd08b43c2fd5f61beb68216b62 -->
       </div>
 
       <div class="container custom__inner">
-        <h2>Нужна уникальная упаковка? Разработаем её для вас!</h2>
-        <p>Воплощение любых конструкторских идей от простых до самых сложных упаковочных решений</p>
-        <a class="button" href="#request">Подобрать упаковку</a>
+        <div class="custom__content">
+          <h2>Нужна уникальная упаковка? Разработаем её для вас!</h2>
+          <p>Воплощение любых конструкторских идей от простых до самых сложных упаковочных решений</p>
+          <a class="button button--custom" href="#request">Подобрать упаковку</a>
+        </div>
       </div>
     </section>
 
     <section class="advantages" id="advantages">
-      <div class="container">
-        <h2>Почему именно мы?</h2>
+      <div class="container advantages__inner">
+        <div class="advantages__content">
+          <h2>Почему именно мы?</h2>
 
-        <div class="advantages__grid">
-          <article>
-            <span>01</span>
-            <h3>Поддержка</h3>
-            <p>Помогаем подобрать подходящий вариант упаковки.</p>
-          </article>
+          <div class="advantages__list">
+            <article class="advantage-item">
+              <div class="advantage-item__heading">
+                <span>01</span>
+                <h3>Поддержка</h3>
+              </div>
+              <p>Наши консультанты помогут вам разобраться в особенностях нашей компании. Они так же помогут подобрать индивидуальное решение именно для вас.</p>
+            </article>
 
-          <article>
-            <span>02</span>
-            <h3>Опыт</h3>
-            <p>Работаем с разными видами картонной упаковки.</p>
-          </article>
+            <article class="advantage-item">
+              <div class="advantage-item__heading">
+                <span>02</span>
+                <h3>Опыт</h3>
+              </div>
+              <p>Уже много лет наша компания успешно производит упаковку любого вида, для самых разных решений.</p>
+            </article>
 
-          <article>
-            <span>03</span>
-            <h3>Сервис</h3>
-            <p>Сопровождаем заказ от идеи до готового изделия.</p>
-          </article>
+            <article class="advantage-item">
+              <div class="advantage-item__heading">
+                <span>03</span>
+                <h3>Сервис</h3>
+              </div>
+              <p>Наша компания воплотит в жизнь любую конструкторскую идею упаковки из картона в высоком качестве и в очень быстрые сроки.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="advantages__image placeholder-image">
+          <!-- TODO: заменить placeholder на изображение из Figma imageRef 95e05e8f43f212d2c9a86ecf7e7463ae9d28319a -->
         </div>
       </div>
     </section>
 
     <section class="faq" id="faq">
-      <div class="container">
+      <div class="container faq__inner">
         <h2>Ответим на ваши вопросы</h2>
 
-        <div class="faq-list">
-          <details open>
+        <div class="faq-list" data-accordion="single">
+          <details>
             <summary>Как расчитывается стоимость заказа?</summary>
             <p>Стоимость зависит от размеров, тиража, материала, печати и сложности конструкции.</p>
           </details>
@@ -189,9 +203,9 @@
             <p>Стоимость доставки рассчитывается индивидуально.</p>
           </details>
 
-          <details>
+          <details open>
             <summary>Подходит ли ваша продукция для хранения продуктов питания?</summary>
-            <p>Это зависит от выбранного материала и требований к упаковке.</p>
+            <p>Да. У нас есть упаковка, специально предназначенная для хранения продуктов питания. Вы можете заказать индивидуальные размеры для вашей продукции, заполнив специальную форму на нашем сацйте</p>
           </details>
 
           <details>

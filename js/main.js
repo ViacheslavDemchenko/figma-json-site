@@ -16,6 +16,22 @@ document.querySelectorAll('.site-nav a').forEach((link) => {
   });
 });
 
+document.querySelectorAll('[data-accordion="single"]').forEach((accordion) => {
+  accordion.querySelectorAll('details').forEach((details) => {
+    details.addEventListener('toggle', () => {
+      if (!details.open) {
+        return;
+      }
+
+      accordion.querySelectorAll('details[open]').forEach((openedDetails) => {
+        if (openedDetails !== details) {
+          openedDetails.open = false;
+        }
+      });
+    });
+  });
+});
+
 document.querySelectorAll('form').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();

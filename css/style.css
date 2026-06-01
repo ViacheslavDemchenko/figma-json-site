@@ -28,6 +28,8 @@
   --product-card-width: 270px;
   --product-image-height: 277px;
   --product-caption-height: 65px;
+  --custom-height: 746px;
+  --faq-row-height: 67px;
 }
 
 *,
@@ -110,6 +112,14 @@ input {
   width: 209px;
   min-height: 49px;
   padding: 15px 28px;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+.button--custom {
+  width: 261px;
+  min-height: 51px;
+  padding: 15px 30px;
   font-size: 16px;
   line-height: 19.36px;
 }
@@ -496,7 +506,7 @@ input {
 
 .custom {
   position: relative;
-  min-height: 746px;
+  min-height: var(--custom-height);
   color: var(--color-white);
   overflow: hidden;
 }
@@ -516,80 +526,177 @@ input {
 .custom__inner {
   position: relative;
   z-index: 1;
-  min-height: 746px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  min-height: var(--custom-height);
+}
+
+.custom__content {
+  width: 670px;
+  padding-top: 234px;
 }
 
 .custom h2 {
-  max-width: 670px;
-}
-
-.custom p {
-  max-width: 570px;
-  margin: 0 0 45px;
-  font-size: 18px;
-  line-height: 1.47;
-}
-
-.advantages {
-  padding: var(--section-space) 0;
-  background: var(--color-white);
-}
-
-.advantages__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.advantages article {
-  padding: 36px;
-  border: 1px solid var(--color-border);
-}
-
-.advantages span {
-  color: var(--color-accent);
-  font-size: 24px;
+  width: 670px;
+  margin: 0 0 36px;
+  color: var(--color-white);
+  font-size: 36px;
+  line-height: 48.71px;
   font-weight: 600;
 }
 
-.advantages h3 {
-  font-size: 24px;
+.custom p {
+  width: 570px;
+  margin: 0 0 50px;
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 26.51px;
 }
 
-.advantages p {
-  color: var(--color-muted);
-  line-height: 1.5;
-}
-
-.faq {
-  padding: var(--section-space) 0;
+.advantages {
+  min-height: 699px;
+  padding: 71px 0 60px;
   background: var(--color-light);
 }
 
-.faq-list {
+.advantages__inner {
   display: grid;
-  gap: 16px;
+  grid-template-columns: 470px 570px;
+  gap: 130px;
+  align-items: start;
+}
+
+.advantages__content h2 {
+  width: 286px;
+  margin: 0 0 58px;
+  color: var(--color-text);
+  font-size: 28px;
+  line-height: 37.88px;
+  font-weight: 600;
+}
+
+.advantages__list {
+  display: grid;
+  gap: 24px;
+}
+
+.advantage-item {
+  display: grid;
+  grid-template-columns: 41px 1fr;
+  column-gap: 0;
+  row-gap: 15px;
+}
+
+.advantage-item__heading {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 41px 1fr;
+  align-items: start;
+}
+
+.advantage-item span,
+.advantage-item h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 20px;
+  line-height: 27.06px;
+  font-weight: 600;
+}
+
+.advantage-item p {
+  grid-column: 2;
+  width: 429px;
+  margin: 0;
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 26.51px;
+}
+
+.advantages__image {
+  width: 570px;
+  height: 512px;
+  margin-top: 8px;
+}
+
+.faq {
+  padding: 60px 0 75px;
+  background: var(--color-white);
+}
+
+.faq__inner h2 {
+  width: 372px;
+  margin: 0 auto 60px;
+  color: var(--color-text);
+  font-size: 28px;
+  line-height: 37.88px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.faq-list {
+  width: 100%;
+  min-height: 403px;
+  display: block;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
 }
 
 .faq details {
   background: var(--color-white);
-  border: 1px solid var(--color-border);
-  padding: 24px;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq details:last-child {
+  border-bottom: 0;
 }
 
 .faq summary {
+  position: relative;
+  min-height: var(--faq-row-height);
+  display: flex;
+  align-items: center;
+  padding: 20px 69px;
+  color: var(--color-text);
   cursor: pointer;
+  list-style: none;
   font-size: 20px;
+  line-height: 27.06px;
   font-weight: 600;
 }
 
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::before,
+.faq summary::after {
+  content: "";
+  position: absolute;
+  left: 29px;
+  background: var(--color-text);
+}
+
+.faq summary::before {
+  width: 13px;
+  height: 2px;
+}
+
+.faq summary::after {
+  width: 2px;
+  height: 13px;
+  margin-left: 5.5px;
+  transition: transform 0.2s ease;
+}
+
+.faq details[open] summary::after {
+  transform: scaleY(0);
+}
+
 .faq p {
+  width: 874px;
+  margin: -3px 0 16px 69px;
   color: var(--color-muted);
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 22.05px;
 }
 
 .contacts {
@@ -946,6 +1053,150 @@ input {
 
   .products__button {
     margin-top: 35px;
+  }
+
+  .custom {
+    min-height: 718px;
+  }
+
+  .custom::after {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .custom__inner {
+    min-height: 718px;
+  }
+
+  .custom__inner::before {
+    content: "";
+    position: absolute;
+    top: 113px;
+    left: 0;
+    width: 330px;
+    height: 491px;
+    background: rgba(0, 0, 0, 0.42);
+  }
+
+  .custom__content {
+    position: relative;
+    z-index: 1;
+    width: 330px;
+    padding-top: 185px;
+  }
+
+  .custom h2 {
+    width: 270px;
+    margin: 0 0 38px 30px;
+    font-size: 24px;
+    line-height: 32.47px;
+  }
+
+  .custom p {
+    width: 300px;
+    margin: 0 0 61px 15px;
+    font-size: 18px;
+    line-height: 26.51px;
+  }
+
+  .button--custom {
+    margin-left: 35px;
+  }
+
+  .advantages {
+    min-height: 994px;
+    padding: 63px 0 68px;
+  }
+
+  .advantages__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .advantages__image {
+    order: -1;
+    width: 330px;
+    height: 297px;
+    margin-top: 0;
+  }
+
+  .advantages__content h2 {
+    width: 229px;
+    margin: 62px auto 41px;
+    font-size: 24px;
+    line-height: 32.47px;
+    text-align: center;
+  }
+
+  .advantages__list {
+    gap: 22px;
+  }
+
+  .advantage-item {
+    display: block;
+    text-align: center;
+  }
+
+  .advantage-item__heading {
+    display: inline-grid;
+    grid-template-columns: max-content max-content;
+    gap: 16px;
+  }
+
+  .advantage-item span,
+  .advantage-item h3 {
+    font-size: 20px;
+    line-height: 27.06px;
+  }
+
+  .advantage-item p {
+    width: 330px;
+    margin: 14px 0 0;
+    font-size: 18px;
+    line-height: 26.51px;
+    text-align: left;
+  }
+
+  .faq {
+    padding: 68px 0 74px;
+  }
+
+  .faq__inner h2 {
+    width: 295px;
+    margin: 0 auto 37px;
+    font-size: 24px;
+    line-height: 32.47px;
+  }
+
+  .faq-list {
+    width: 330px;
+    min-height: 560px;
+  }
+
+  .faq summary {
+    min-height: 67px;
+    padding: 9px 24px 10px 69px;
+    font-size: 18px;
+    line-height: 24.35px;
+    font-weight: 500;
+  }
+
+  .faq details[open] summary {
+    min-height: 111px;
+    align-items: flex-start;
+    padding-top: 18px;
+  }
+
+  .faq summary::before,
+  .faq summary::after {
+    left: 30px;
+  }
+
+  .faq p {
+    width: 253px;
+    margin: -17px 0 22px 69px;
+    font-size: 16px;
+    line-height: 22.05px;
   }
 
 }
